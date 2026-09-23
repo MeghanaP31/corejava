@@ -10,10 +10,11 @@ class InvalidSalryException extends Exception{
 public class CustomExceptions {
     static void main() throws InvalidSalryException {
         Scanner sc=new Scanner(System.in);
-        System.out.println("enter Employee Salary: ");
-        double salary=sc.nextDouble();
 
         try{
+             System.out.println("enter Employee Salary: ");
+        double salary=sc.nextDouble();
+            
             if(salary < 10000 || salary > 100000){
                 throw new InvalidSalryException(" Salary must be between 10000 and 100000");
             }else {
@@ -21,7 +22,8 @@ public class CustomExceptions {
             }
         }catch (InvalidSalryException e){
             System.out.println("Invalid Salary "+e.getMessage());
+        }catch(InputMisMatchException ie){
+            System.out.println("Please enter numeric input")
         }
-
     }
 }
