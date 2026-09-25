@@ -11,14 +11,14 @@ final class Point {
         this.x=x;
         this.y=y;
     }
-/*
+
     public int getX() {
         return x;
     }
 
     public int getY() {
         return y;
-    }*/
+    }
 
     @Override
     public String toString() {
@@ -28,6 +28,8 @@ final class Point {
     static void main() {
         Point p=new Point(10,20);
         System.out.println(p);
+        System.out.println("X: "+p.getX());
+        System.out.println("Y: "+p.getY());
 
         //p.x=50; //cannot modify
 
